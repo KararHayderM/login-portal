@@ -8,6 +8,7 @@
     <link rel="preload" href="styles.css" as="style">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     
 </head>
 <body>
@@ -39,8 +40,17 @@
             </div>
             <div class="password">
                 <h2>:كلمة المرور</h2>
-                <input class="pass_input" type="password" name="student_password" id="student_password">
+                <div class="pass_div">
+                    <input type="checkbox" name="showpass" id="showpass">
+                    <input class="pass_input" type="password" name="student_password" id="student_password">
+                </div>
                 
+                <ol class="pass_list" id = "list_pass" dir="rtl">
+                    <li id="char">كلمة المرور يجب ان تكون 8 احرف او اكثر</li>
+                    <li id="spchar">كلمة المرور يجب ان تحتوي احرف خاصة</li>
+                    <li id="uplowchar">كلمة المرور يجب ان تحتوي احرف كبيرة و صغيرة</li>
+                    <li id="numchar">كلمة المرور يجب ان تحتوي على ارقام</li>
+                </ol>
             </div>
 
         </div>
@@ -48,7 +58,7 @@
         <div class="panel">
             <button class="btn" type="button">نسجيل الدخول</button>
             <div class="or"> <h2>او</h2></div>
-            <button class="btn" type="button">انشاء حساب</button>
+            <button class="btn" type="button" id="btn_signup">انشاء حساب</button>
         </div>
 
     </div>
